@@ -1,0 +1,35 @@
+﻿@model List<Author>
+
+<a class="btn btn-warning" asp-action="Add" asp-controller="Author">Yazar Ekle</a>
+
+<table class="table table-striped table-hover" >
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Yazar Adı</th>
+            <th>Biyografi</th>
+            <th>işlemler</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Author author in Model)
+        {<tr>
+            <td>@author.Id</td>
+            <td>@author.Name</td>
+            <td>@author.Biography</td>
+            <td>
+                <a onclick="return confirm('Silmek istediğinizden emin misiniz?')" asp-controller="Author" asp-action="Delete" asp-route-id="@author.Id" class="btn btn-danger">Sil</a>
+                <a asp-controller="Author" asp-action="Edit" asp-route-id="@author.Id" class="btn btn-success">Düzenle</a>
+
+              </td>
+              </tr>
+        }
+
+    </tbody>
+
+</table>
+
+
+
+
