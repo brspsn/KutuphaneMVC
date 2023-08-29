@@ -1,0 +1,14 @@
+﻿@model Publisher    
+
+<form class="from" method="post"> 
+    <label class="form-label" asp-for="Name">YayınEvi Adı</label>
+    <input asp-for="Name" class="form-control" placeholder=" YayınEvi adını giriniz"/>
+
+    <label class="form-label" asp-for="Address">Adres</label>
+    <textarea asp-for="Address" class="form-control" rows="5" placeholder="adres bilgisi giriniz"></textarea>
+
+    <button type="submit" class="btn btn-primary">Ekle</button>
+    <button type="reset" class="btn btn-danger">Temizle</button>
+
+
+</form>
