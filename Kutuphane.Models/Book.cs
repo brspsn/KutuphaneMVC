@@ -13,7 +13,7 @@ namespace Kutuphane.Models
         public int PageCount { get; set; } = 0;
         public string? ISBM { get; set; }
         public bool IsDigital { get; set; }=false;
-        public int CategoryId { get; set; }
+        public int? CategoryId { get; set; }
         public virtual Category? Category { get; set; }//senaryo gereği 1 kitabın 1 kategori durumu olması varsayılmıştır.
         public virtual ICollection<Author> Authors { get; set; }=new List<Author>();
         public virtual ICollection<Publisher> Publishers { get; set; }=new List<Publisher>();

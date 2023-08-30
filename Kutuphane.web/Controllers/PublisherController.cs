@@ -21,14 +21,14 @@ namespace Kutuphane.web.Controllers
         {
             return View();
         }
-        [HttpGet]
+        [HttpPost]
         public IActionResult Add( Publisher publisher)
         {
             _context.Publisher.Add(publisher);
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
-        [HttpGet]
+        [HttpPost]
         public IActionResult Edit()
         {
             return View();

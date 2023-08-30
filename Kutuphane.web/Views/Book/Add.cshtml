@@ -1,26 +1,12 @@
 ﻿@model Book
 
 
-<form class="Form" method="post">
-
-    <label class="form-label" asp-for="Name">Kitap Adı</label>
-    <input asp-for="Name" class="form-control" placeholder="Kitap adı giriniz" />
-
-    <label asp-for="PageCount" class="form-label">Biyografi</label>
-    <input asp-for="PageCount" class="form-control" placeholder="Sayfa sayısını giriniz"/>
-    <label asp-for="ISBM" class="form-label">ISBM</label>
-    <input asp-for="ISBM" class="form-control" placeholder="ISBN numarasını giriniz"/>
-    <label for="IsDigital" class="form-label">Dijital mi?</label>
-    <div>
-        <input type="radio" id="isDigitalYes" name="IsDigital" value="yes">
-        <label for="isDigitalYes">Evet</label>
-    </div>
-    <div>
-        <input type="radio" id="isDigitalNo" name="IsDigital" value="no">
-        <label for="isDigitalNo">Hayır</label>
-    </div>
-
-
+<form method="post" >
+    <input asp-for="Name" placeholder="Kitap adı giriniz" class="form-control" />
+    <input asp-for="ISBM" placeholder="ISBM giriniz" class="form-control" />
+    <input asp-for="Category.Name" placeholder="Kategori adını giriniz" class="form-control" />
+    
+    
 
     <button type="submit" class="btn btn-primary">Ekle</button>
     <button type="reset" class="btn btn-danger">Temizle</button>
